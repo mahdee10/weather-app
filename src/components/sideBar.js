@@ -52,7 +52,7 @@ export default function SideBar(props) {
                 </svg>
             </button>
             <div className={`${isMenuOpen ? "block" : "hidden"}`}>
-            <div className={`text-white bg-gb h-full  flex items-center  flex-col w-full rounded-3xl pt-5 ${isMenuOpen ? "block static" : "hidden absolute"}`}>
+            <div className={`text-white bg-gb h-full  flex items-center  flex-col w-full rounded-3xl pt-5 ${isMenuOpen ? "block " : "hidden "}`}>
                 <img src={logo} alt="logo" className="w-10 h-fit"></img>
                 <div className="flex items-center justify-between flex-col pt-20 nav">
                     <a href="/" className={`flex flex-col items-center mt-5 text-g hover:text-white ${pathname === '/' ? 'active' : ''}`}>

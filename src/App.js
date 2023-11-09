@@ -12,11 +12,11 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   }
   return (
-    <div className="flex justify-between p-5 bg-main h-screen ">
-      <div className={`sm:w-side sm:bg-gb sm:h-full  rounded-3xl ${isMenuOpen ? "bg-gb h-full w-full" : ""}`}>
+    <div className="flex sm:justify-between p-5 bg-main h-screen ">
+      <div className={`sm:w-side sm:bg-gb sm:h-full  rounded-3xl ${isMenuOpen ? "bg-gb h-full w-full " : ""}`}>
         <SideBar c={c}></SideBar>
       </div>
-      <div className='sm:w-cont '>
+      <div className={`sm:w-cont ${isMenuOpen ? "" : "sidebar-closed"}`}>
         <BrowserRouter>
           <Routes>
             <Route path="/" >
