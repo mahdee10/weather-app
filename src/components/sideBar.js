@@ -1,4 +1,4 @@
-import logo from "../assets/imgs/logo.png"
+import logo from "../assets/imgs/logo2.png"
 import weather from "../assets/imgs/weather.png"
 import cities from "../assets/imgs/list.png"
 import { useEffect, useState } from "react"
@@ -13,7 +13,7 @@ export default function SideBar() {
         // <div className='sm:w-side bg-gb h-full rounded-3xl'>
         <div className="text-white sm:bg-gb h-full  flex   flex-col w-full rounded-3xl pt-5">
             <div className="flex justify-center">
-            <img src={logo} alt="logo" className="w-10 h-fit"></img>
+            <img src={logo} alt="logo" className="sm:w-fit sm:h-fit w-10"></img>
 
             </div>
             <div className="flex sm:flex-col flex-row sm:items-center justify-between  sm:pt-20 nav">
