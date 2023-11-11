@@ -45,10 +45,10 @@ export default function Weather() {
                     </p>
                 </div>
             ) : (
-                <>
+                <div className="text-white">
                     <h2>Weather for Location: {city}</h2>
                     <h2>{weatherData.data.values.temperature}</h2>
-                </>
+                </div>
             )}
         </div>
     )
