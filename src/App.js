@@ -5,9 +5,11 @@ import SideBar from './components/sideBar';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cities from './pages/Cities';
+import { CityProvider } from './context/cityContext';
 function App() {
   
   return (
+    <CityProvider>
     <div className="flex sm:flex-row flex-col sm:justify-between p-5 bg-main h-screen ">
       <div className='sm:w-side sm:bg-gb sm:h-full w-full rounded-3xl'>
         <SideBar></SideBar>
@@ -23,6 +25,7 @@ function App() {
         </BrowserRouter>
       </div>
     </div>
+    </CityProvider>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));

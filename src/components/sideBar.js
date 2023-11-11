@@ -3,7 +3,6 @@ import weather from "../assets/imgs/weather.png"
 import cities from "../assets/imgs/list.png"
 import { useEffect, useState } from "react"
 export default function SideBar() {
-    console.log(window.location.pathname)
     const [pathname, setPath] = useState(window.location.pathname)
     useEffect(() => {
         setPath(window.location.pathname);
