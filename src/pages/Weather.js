@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import gear3 from "../assets/imgs/gear3.png"
 import gear2 from "../assets/imgs/gear2.png"
-// import gear1 from "../assets/imgs/gear1.png"
+import gear1 from "../assets/imgs/gear1.png"
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
-    const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
+    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
 
     const { city } = useCityContext();
     useEffect(() => {
