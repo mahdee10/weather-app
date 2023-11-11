@@ -21,4 +21,27 @@
 }
 
 
+.rotate{
+  animation: 'rotate 2s linear infinite',
+}
+.rotateInverse{
+  animation: 'rotateInverse 2s linear infinite',
+}
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateInverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

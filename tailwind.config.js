@@ -13,7 +13,8 @@ module.exports = {
       colors:{
         "gb":"rgb(32 43 59)",
         "main":"rgb(11 19 30)",
-        "g":"#9399A2"
+        "g":"#9399A2",
+        "yell":"#FCC419"
       }
     },
   },
