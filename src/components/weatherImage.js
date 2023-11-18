@@ -21,7 +21,7 @@ const WeatherImage = ({ imageName ,isLarge}) => {
 
   const imageUrl = largeImages[matchingKey];
 
-  return <img src={imageUrl} alt={`Large image: ${matchingKey}`} />;
+  return <img src={imageUrl}  />;
 };
 
 export default WeatherImage;
