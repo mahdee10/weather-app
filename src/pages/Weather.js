@@ -102,12 +102,12 @@ export default function Weather() {
                 <div className="p-10 flex sm:flex-row flex-col sm:justify-between justify-center sm:items-stretch items-center sm:w-3/5">
                     <div className="flex flex-col justify-between">
                         <h1 className="text-white text-center text-3xl font-extrabold">
-                            MADRID
+                            {city}
                         </h1>
                         <div className="sm:hidden flex justify-center py-2">
                             <WeatherImage imageName={weatherData.data.values.weatherCode} isLarge={false}></WeatherImage>
                         </div>
-                        <h2 className="text-white text-center text-5xl font-extrabold">
+                        <h2 className="text-white text-center sm:text-5xl text-2xl font-extrabold">
                         {weatherData.data.values.temperature}°
                         </h2>
                     </div>
