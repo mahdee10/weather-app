@@ -7,58 +7,58 @@ import gear3 from "../assets/imgs/gear3.png"
 import gear2 from "../assets/imgs/gear2.png"
 import WeatherImage from "../components/weatherImage";
 export default function Weather() {
-    const todayForecast = [
-        {
-            time: "6:00 AM",
-            weatherCode: "10000",
-            temp: "25"
-        },
-        {
-            time: "9:00 AM",
-            weatherCode: "10000",
-            temp: "28"
-        },
-        {
-            time: "12:00 PM",
-            weatherCode: "10000",
-            temp: "30"
-        },
-        {
-            time: "3:00 PM",
-            weatherCode: "10000",
-            temp: "33"
-        },
-        {
-            time: "6:00 PM",
-            weatherCode: "10000",
-            temp: "34"
-        },
-        {
-            time: "9:00 PM",
-            weatherCode: "10000",
-            temp: "30"
-        },
-        {
-            time: "12:00 AM",
-            weatherCode: "10000",
-            temp: "34"
-        },
-        {
-            time: "3:00 AM",
-            weatherCode: "10000",
-            temp: "34"
-        },
-        {
-            time: "6:00 AM",
-            weatherCode: "10000",
-            temp: "34"
-        },
-        {
-            time: "9:00 AM",
-            weatherCode: "10000",
-            temp: "34"
-        },
-    ]
+    // const todayForecast = [
+    //     {
+    //         time: "6:00 AM",
+    //         weatherCode: "10000",
+    //         temp: "25"
+    //     },
+    //     {
+    //         time: "9:00 AM",
+    //         weatherCode: "10000",
+    //         temp: "28"
+    //     },
+    //     {
+    //         time: "12:00 PM",
+    //         weatherCode: "10000",
+    //         temp: "30"
+    //     },
+    //     {
+    //         time: "3:00 PM",
+    //         weatherCode: "10000",
+    //         temp: "33"
+    //     },
+    //     {
+    //         time: "6:00 PM",
+    //         weatherCode: "10000",
+    //         temp: "34"
+    //     },
+    //     {
+    //         time: "9:00 PM",
+    //         weatherCode: "10000",
+    //         temp: "30"
+    //     },
+    //     {
+    //         time: "12:00 AM",
+    //         weatherCode: "10000",
+    //         temp: "34"
+    //     },
+    //     {
+    //         time: "3:00 AM",
+    //         weatherCode: "10000",
+    //         temp: "34"
+    //     },
+    //     {
+    //         time: "6:00 AM",
+    //         weatherCode: "10000",
+    //         temp: "34"
+    //     },
+    //     {
+    //         time: "9:00 AM",
+    //         weatherCode: "10000",
+    //         temp: "34"
+    //     },
+    // ]
     const [weatherData, setWeatherData] = useState({});
     const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
 
@@ -69,7 +69,6 @@ export default function Weather() {
             .then((response) => {
                 setWeatherData(response.data);
                 console.log(weatherData)
-                console.log(todayForecast)
             })
             .catch((error) => {
                 console.error('Error fetching weather data:', error);
