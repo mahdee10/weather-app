@@ -25,6 +25,10 @@ export default function SideBar() {
                     <img src={cities} alt="logo" className="w-5 h-fit"></img>
                     <p>Cities</p>
                 </a>
+                <a href="/settings" className={`flex flex-col items-center mt-5 text-g hover:text-white ${pathname === '/settings' ? 'active' : ''}`}>
+                    <img src={cities} alt="logo" className="w-5 h-fit"></img>
+                    <p>Settings</p>
+                </a>
             </div>
         </div>
         // </div>
