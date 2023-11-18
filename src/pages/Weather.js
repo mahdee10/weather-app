@@ -69,6 +69,7 @@ export default function Weather() {
             .then((response) => {
                 setWeatherData(response.data);
                 console.log(weatherData)
+                console.log(todayForecast)
             })
             .catch((error) => {
                 console.error('Error fetching weather data:', error);
