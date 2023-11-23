@@ -50,7 +50,7 @@ const TodayForecast = ({ data }) => {
 
                     <SwiperSlide
                         key={index}
-                        onMouseEnter={() => console.log("Hovered on SwiperSlide:", cat)}
+                        onMouseEnter={() => console.log("Hovered on SwiperSlide:", cat[Object.keys(cat)[0]].values.weatherCode)}
                     >
                         <div className=" flex flex-col sm:w-fit justify-between sm:h-fit h-24 content-end sm:mb-0 mb-3 shrink-0">
                             <h4 className='sm:text-base text-xs text-g text-center  '>
