@@ -5,7 +5,7 @@ import axios from 'axios';
 import gear3 from "../assets/imgs/gear3.png"
 import gear2 from "../assets/imgs/gear2.png"
 import WeatherImage from "../components/weatherImage";
-// import TodayForecast from "../components/TodayForecast";
+import TodayForecast from "../components/TodayForecast";
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
