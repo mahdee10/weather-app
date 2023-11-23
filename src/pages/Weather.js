@@ -11,7 +11,6 @@ export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast ,setForecastData] = useState({});
     const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
-
     const { city } = useCityContext();
 
     // Fetch real-time weather data using the city context
