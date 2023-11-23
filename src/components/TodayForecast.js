@@ -61,7 +61,7 @@ const TodayForecast = ({ data }) => {
                             </div>
                             <div className='sm:hidden block flex pt-2.5 justify-center'>
                                 <WeatherImage
-                                    imageName={cat[Object.keys(cat)[0]]?.values}
+                                    imageName={cat[Object.keys(cat)[0]]?.values?.weatherCode}
                                     size={"xs"}
                                 ></WeatherImage>
                             </div>
