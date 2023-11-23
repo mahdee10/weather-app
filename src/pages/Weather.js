@@ -5,10 +5,10 @@ import axios from 'axios';
 import gear3 from "../assets/imgs/gear3.png"
 import gear2 from "../assets/imgs/gear2.png"
 import WeatherImage from "../components/weatherImage";
-import TodayForecast from "../components/TodayForecast";
+// import TodayForecast from "../components/TodayForecast";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
-    const [todayForecast, setForecastData] = useState({});
+    // const [todayForecast, setForecastData] = useState({});
     const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
 
     const { city } = useCityContext();
@@ -24,17 +24,16 @@ export default function Weather() {
             });
     }, [city, weatherData]);
 
-    useEffect(() => {
-        axios
-            .get(`https://api.tomorrow.io/v4/weather/forecast?location=${city}&apikey=${apiKey}`)
-            .then((response) => {
-                setForecastData(response.data.timelines);
-                // console.log(todayForecast)
-            })
-            .catch((error) => {
-                console.error('Error fetching forecast data:', error);
-            });
-    }, [city, todayForecast]);
+    // useEffect(() => {
+    //     axios
+    //         .get(`https://api.tomorrow.io/v4/weather/forecast?location=${city}&apikey=${apiKey}`)
+    //         .then((response) => {
+    //             setForecastData(response.data.timelines);
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error fetching forecast data:', error);
+    //         });
+    // }, [city, todayForecast]);
 
     const rotatingStyle = {
         animation: 'rotate 2s linear infinite',
@@ -44,7 +43,7 @@ export default function Weather() {
     };
     return (
         <div className="">
-            {Object.keys(weatherData).length === 0 || todayForecast.length === 0 || !todayForecast.hourly ? (
+            {Object.keys(weatherData).length === 0 ? (
                 <div className="absolute top-2/4 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                     <div className="flex">
                         <img style={rotatingStyle2} src={gear3} alt="gear3"></img>
@@ -77,7 +76,7 @@ export default function Weather() {
                         <WeatherImage imageName={weatherData.data.values.weatherCode} size={"l"}></WeatherImage>
                     </div>
                     <section className="p-5 sm:w-full bg-gb rounded-xl">
-                        <TodayForecast data={todayForecast.hourly} />
+                        {/* <TodayForecast data={todayForecast.hourly} /> */}
                     </section>
                 </div>
             )}
