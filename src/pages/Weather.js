@@ -1,6 +1,6 @@
 
 import { useCityContext } from "../context/cityContext";
-import React, { useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 import gear3 from "../assets/imgs/gear3.png"
 import gear2 from "../assets/imgs/gear2.png"
