@@ -10,7 +10,7 @@ import WeatherImage from './weatherImage';
 const TodayForecast = ({ data }) => {
     // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
-    console.log("dddddddddd",data)
+    console.log("dddddddddd", data)
 
     if (data === undefined || data.length === 0) {
         return <div>wait</div>;
@@ -18,9 +18,9 @@ const TodayForecast = ({ data }) => {
     const formatTime = (timeString) => {
         const date = new Date(timeString);
         return date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
-      };
+    };
 
-      return (
+    return (
         <div className="">
             <Swiper
                 modules={[Navigation]}
@@ -47,8 +47,11 @@ const TodayForecast = ({ data }) => {
                 }}
             >
                 {data.slice(1).map((cat, index) => (
-                    
-                    <SwiperSlide key={index}>
+
+                    <SwiperSlide
+                        key={index}
+                        onMouseEnter={() => console.log("Hovered on SwiperSlide:", cat)}
+                    >
                         <div className=" flex flex-col sm:w-fit justify-between sm:h-fit h-24 content-end sm:mb-0 mb-3 shrink-0">
                             <h4 className='sm:text-base text-xs text-g text-center  '>
                                 {cat[Object.keys(cat)[0]]?.time && formatTime(cat[Object.keys(cat)[0]].time)}
