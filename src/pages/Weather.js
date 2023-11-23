@@ -10,7 +10,7 @@ import TodayForecast from "../components/TodayForecast";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast ,setForecastData] = useState({});
-    const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
+    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
     const { city } = useCityContext();
 
     // Fetch real-time weather data using the city context
