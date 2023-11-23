@@ -105,9 +105,9 @@ export default function Weather() {
             .get(`https://api.tomorrow.io/v4/weather/forecast?location=${city}&apikey=${apiKey}`)
             .then((response) => {
                 setForecastData(response.data);
-                console.log(response.data)
+                console.log(response.data.timelines.hourly,"hello")
 
-                console.log(todayForecast.timelines.hourly)
+                console.log(todayForecast.timelines.hourly,"klb")
             })
             .catch((error) => {
                 console.error('Error fetching forecast data:', error);
