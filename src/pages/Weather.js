@@ -9,7 +9,7 @@ import WeatherImage from "../components/weatherImage";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     // const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
+    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
 
     const { city } = useCityContext();
     useEffect(() => {
