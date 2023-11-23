@@ -68,7 +68,7 @@ const TodayForecast = ({ data }) => {
                                     size={"xs"}
                                 ></WeatherImage>
                             </div>
-                            <h4 className=' text-xxs pt-2.5 text-white text-center '>
+                            <h4 className=' sm:text-base text-xs pt-2.5 text-white text-center '>
                                 {cat?.values?.temperature}°
                             </h4>
                         </div>

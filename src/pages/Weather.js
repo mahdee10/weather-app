@@ -10,9 +10,9 @@ import TodayForecast from "../components/TodayForecast";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
+    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
     const { city } = useCityContext();
-    
+
 
     // Fetch real-time weather data using the city context
     useEffect(() => {
@@ -70,7 +70,7 @@ export default function Weather() {
                     <div className="sm:w-3/5 sm:flex sm:flex-col justify-between sm:full">
                         <div className="p-10 sm:flex sm:flex-row flex-col sm:justify-between justify-center sm:items-stretch items-center sm:w-full">
                             <div className="flex flex-col justify-between">
-                                <h1 className="text-white text-center text-3xl font-extrabold">
+                                <h1 className="text-white text-center sm:text-5xl text-3xl font-extrabold">
                                     {city}
                                 </h1>
                                 <div className="sm:hidden flex justify-center py-2">
