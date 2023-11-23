@@ -85,7 +85,7 @@ export default function Weather() {
     // ]
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
+    const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
 
     const { city } = useCityContext();
     useEffect(() => {
