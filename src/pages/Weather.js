@@ -73,14 +73,14 @@ export default function Weather() {
                                     {city}
                                 </h1>
                                 <div className="sm:hidden flex justify-center py-2">
-                                    <WeatherImage imageName={weatherData.data.values.weatherCode} size={"xl"}></WeatherImage>
+                                    <WeatherImage imageName={weatherData.data.values.weatherCode} size={"l"}></WeatherImage>
                                 </div>
                                 <h2 className="text-white text-center sm:text-5xl text-2xl font-extrabold">
                                     {weatherData.data.values.temperature}°
                                 </h2>
                             </div>
                             <div className="sm:block hidden">
-                                <WeatherImage imageName={weatherData.data.values.weatherCode} size={"l"}></WeatherImage>
+                                <WeatherImage imageName={weatherData.data.values.weatherCode} size={"xl"}></WeatherImage>
                             </div>
                         </div>
                         
