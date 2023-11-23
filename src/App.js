@@ -16,7 +16,7 @@ function App() {
         <div className='sm:w-side sm:bg-gb sm:h-full w-full rounded-3xl'>
           <SideBar></SideBar>
         </div>
-        <div className='sm:w-cont '>
+        <div className='sm:w-cont sm:h-full'>
           <BrowserRouter>
             <Routes>
               <Route path="/" >
