@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import { Navigation } from 'swiper/modules';
 import WeatherImage from './weatherImage';
 const TodayForecast = ({ data }) => {
-    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
 
     if (!data || data.length === 0) {
@@ -26,8 +26,8 @@ const TodayForecast = ({ data }) => {
             effect="coverflow"
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={(swiper) => {
-                console.log('slide change', swiper.activeIndex);
-                setActiveSlideIndex(swiper.activeIndex);
+                // console.log('slide change', swiper.activeIndex);
+                // setActiveSlideIndex(swiper.activeIndex);
             }}
 
             breakpoints={{
