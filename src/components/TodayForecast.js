@@ -54,22 +54,22 @@ const TodayForecast = ({ data }) => {
                     >
                         <div className=" flex flex-col sm:w-fit justify-between sm:h-fit h-24 content-end sm:mb-0 mb-3 shrink-0">
                             <h4 className='sm:text-base text-xs text-g text-center  '>
-                                {cat[Object.keys(cat)[0]]?.time && formatTime(cat[Object.keys(cat)[0]].time)}
+                                {cat?.time && formatTime(cat.time)}
                             </h4>
                             <div className='sm:block hidden flex pt-2.5 justify-center'>
                                 <WeatherImage
-                                    imageName={cat[Object.keys(cat)[0]]?.values?.weatherCode}
+                                    imageName={cat?.values?.weatherCode}
                                     size={"s"}
                                 ></WeatherImage>
                             </div>
                             <div className='sm:hidden block flex pt-2.5 justify-center'>
                                 <WeatherImage
-                                    imageName={cat[Object.keys(cat)[0]]?.values?.weatherCode}
+                                    imageName={cat?.values?.weatherCode}
                                     size={"xs"}
                                 ></WeatherImage>
                             </div>
                             <h4 className=' text-xxs pt-2.5 text-white text-center '>
-                                {cat[Object.keys(cat)[0]]?.values?.temperature}°
+                                {cat?.values?.temperature}°
                             </h4>
                         </div>
                     </SwiperSlide>
