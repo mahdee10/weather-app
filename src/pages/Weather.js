@@ -84,7 +84,7 @@ export default function Weather() {
 
     // ]
     const [weatherData, setWeatherData] = useState({});
-    const [todayForecast, setForecastData] = useState([]);
+    const [todayForecast, setForecastData] = useState({});
     const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
 
     const { city } = useCityContext();
@@ -104,9 +104,9 @@ export default function Weather() {
         axios
             .get(`https://api.tomorrow.io/v4/weather/forecast?location=${city}&apikey=${apiKey}`)
             .then((response) => {
-                setForecastData(response.data.timelines);
-                console.log(response.data.timelines.hourly,"hello")
-                console.log(todayForecast.hourly,"klb")
+                setForecastData(response.data);
+                console.log(response.data,"hello")
+                console.log(todayForecast.timelines.hourly,"klb")
             })
             .catch((error) => {
                 console.error('Error fetching forecast data:', error);
@@ -155,7 +155,7 @@ export default function Weather() {
                         <WeatherImage imageName={"10010"} isLarge={true}></WeatherImage>
                     </div>
                     <section className="p-5 sm:w-full bg-gb rounded-xl">
-                        <TodayForecast data={todayForecast.hourly} />
+                        <TodayForecast data={todayForecast.timelines.hourly} />
                     </section>
                 </div>
             )}
