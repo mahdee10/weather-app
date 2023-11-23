@@ -10,6 +10,7 @@ import WeatherImage from './weatherImage';
 const TodayForecast = ({ data }) => {
     // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
+    console.log("dddddddddd",data)
 
     if (!data || data.length === 0) {
         return null;
