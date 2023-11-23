@@ -107,7 +107,7 @@ export default function Weather() {
                 setForecastData(response.data);
                 console.log(response.data.timelines.hourly,"hello")
 
-                console.log(todayForecast.timelines.hourly,"klb")
+                console.log(todayForecast,"klb")
             })
             .catch((error) => {
                 console.error('Error fetching forecast data:', error);
