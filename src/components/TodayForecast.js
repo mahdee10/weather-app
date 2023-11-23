@@ -47,6 +47,7 @@ const TodayForecast = ({ data }) => {
                 }}
             >
                 {data.slice(1).map((cat, index) => (
+                    
                     <SwiperSlide key={index}>
                         <div className=" flex flex-col sm:w-fit justify-between sm:h-fit h-24 content-end sm:mb-0 mb-3 shrink-0">
                             <h4 className='sm:text-base text-xs text-g text-center  '>
@@ -60,7 +61,7 @@ const TodayForecast = ({ data }) => {
                             </div>
                             <div className='sm:hidden block flex pt-2.5 justify-center'>
                                 <WeatherImage
-                                    imageName={cat[Object.keys(cat)[0]]?.values?.weatherCode}
+                                    imageName={cat[Object.keys(cat)[0]]?.values}
                                     size={"xs"}
                                 ></WeatherImage>
                             </div>

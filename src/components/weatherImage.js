@@ -3,6 +3,7 @@ import largeImages from '../assets/imgs/large/png';
 
 const WeatherImage = ({ imageName ,size}) => {
   // Find the key that contains the specified value
+  console.log(imageName)
   let matchingKey;
 
   if (size==="l") {
