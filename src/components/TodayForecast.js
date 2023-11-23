@@ -21,6 +21,8 @@ const TodayForecast = ({ data }) => {
       };
 
     return (
+        <div className="">
+        {data ? (
         <Swiper
             modules={[Navigation]}
             slidesPerView={1}
@@ -65,6 +67,10 @@ const TodayForecast = ({ data }) => {
             {/* <SwiperSlide></SwiperSlide> */}
 
         </Swiper>
+        ) : (
+            <div>wait</div>
+            )}
+            </div>
 
     );
 };
