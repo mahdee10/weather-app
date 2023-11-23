@@ -12,8 +12,8 @@ const TodayForecast = ({ data }) => {
 
     console.log("dddddddddd",data)
 
-    if (!data || data.length === 0) {
-        return null;
+    if (data === undefined || data.length === 0) {
+        return <div>wait</div>;
     }
     const formatTime = (timeString) => {
         const date = new Date(timeString);
