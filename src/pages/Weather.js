@@ -85,7 +85,7 @@ export default function Weather() {
     // ]
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
+    const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
 
     const { city } = useCityContext();
     useEffect(() => {
@@ -119,7 +119,8 @@ export default function Weather() {
     };
     return (
         <div className="">
-            {Object.keys(weatherData).length === 0 ? (
+            {Object.keys(weatherData).length === 0 || todayForecast.length === 0 ? (
+
                 <div className="absolute top-2/4 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                     <div className="flex">
                         <img style={rotatingStyle2} src={gear3} alt="gear3"></img>
@@ -145,7 +146,7 @@ export default function Weather() {
                             <WeatherImage imageName={weatherData.data.values.weatherCode} isLarge={false}></WeatherImage>
                         </div>
                         <h2 className="text-white text-center sm:text-5xl text-2xl font-extrabold">
-                        {weatherData.data.values.temperature}°
+                            {weatherData.data.values.temperature}°
                         </h2>
                     </div>
                     <div className="sm:block hidden">
