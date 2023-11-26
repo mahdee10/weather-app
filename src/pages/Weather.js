@@ -11,7 +11,7 @@ import WeekForecast from "../components/weekForecast";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
+    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
     const { city } = useCityContext();
 
     //Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj
@@ -89,6 +89,7 @@ export default function Weather() {
                             </div>
                         </div>
                         <section className="p-5 sm:w-full bg-gb rounded-xl">
+                            <h1 className="text-g sm:text-sm pb-3">Today's Forecast</h1>
                             <TodayForecast data={todayForecast.hourly} />
                         </section>
                     </div>
