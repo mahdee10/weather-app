@@ -7,13 +7,13 @@ export default function WeekForecast(props) {
     return (
         <div className="flex justify-between py-3 items-center bg-gb ">
             <h3 className="text-g w-[30%]">{dayOfWeek}</h3>
-            <div className="sm:block hidden w-[30%]">
+            <div className="sm:block hidden w-[33.3%]">
                 <WeatherImage imageName={props.weatherCodeMax} size={"s"}></WeatherImage>
             </div>
-            <div className="sm:hidden block w-[30%]">
+            <div className="sm:hidden block w-[33.3%]">
                 <WeatherImage imageName={props.weatherCodeMax} size={"xs"}></WeatherImage>
             </div>
-            <h3 className="text-g w-[40%] text-end"><span className="text-white">{temperatureMax}</span>/{temperatureMin}</h3>
+            <h3 className="text-g w-[33.3%] text-end"><span className="text-white">{temperatureMax}</span>/{temperatureMin}</h3>
         </div>
     )
 }
