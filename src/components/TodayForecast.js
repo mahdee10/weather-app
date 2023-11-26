@@ -56,13 +56,13 @@ const TodayForecast = ({ data }) => {
                             <h4 className='sm:text-base text-xs text-g text-center  '>
                                 {cat?.time && formatTime(cat.time)}
                             </h4>
-                            <div className='sm:block hidden flex pt-2.5 justify-center'>
+                            <div className='sm:flex hidden  pt-2.5 justify-center'>
                                 <WeatherImage
                                     imageName={cat?.values?.weatherCode}
                                     size={"s"}
                                 ></WeatherImage>
                             </div>
-                            <div className='sm:hidden block flex pt-2.5 justify-center'>
+                            <div className='sm:hidden  flex pt-2.5 justify-center'>
                                 <WeatherImage
                                     imageName={cat?.values?.weatherCode}
                                     size={"xs"}
