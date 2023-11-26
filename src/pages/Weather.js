@@ -11,9 +11,12 @@ import WeekForecast from "../components/weekForecast";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
+    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
     const { city } = useCityContext();
 
+    //Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj
+    //Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt
+    //L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3
 
     // Fetch real-time weather data using the city context
     useEffect(() => {
@@ -93,7 +96,7 @@ export default function Weather() {
                     <div className="sm:w-today p-5 bg-gb rounded-xl sm:hel sm:mt-0 mt-5 ">
                         <h1 className="text-g sm:text-sm pb-3">7-Day Forecast</h1>
                         <div className="flex flex-col justify-between">
-                            {todayForecast.daily.length > 0 ? (
+                            {todayForecast.daily && todayForecast.daily.length > 0 ? (
                                 todayForecast.daily.map((day) => (
                                     <WeekForecast key={day.time} time={day.time} weatherCodeMax={day.values.weatherCodeMax} temperatureMax={day.values.temperatureMax} temperatureMin={day.values.temperatureMin} />
                                 ))
