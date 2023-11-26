@@ -9,6 +9,9 @@
   /* background-color: rgb(11 19 30); */
   font-family: "Rubik";
 }
+html{
+  background-color: rgb(11 19 30);
+}
 
 .nav a:hover img{
   filter: brightness(0) invert(1) !important;
@@ -47,7 +50,6 @@
   }
 }
 
-/* .hel{
-  background-color: wheat;
+.hel{
   height: 38.2rem !important;
-} */
+}

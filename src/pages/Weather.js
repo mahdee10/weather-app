@@ -6,6 +6,7 @@ import gear3 from "../assets/imgs/gear3.png"
 import gear2 from "../assets/imgs/gear2.png"
 import WeatherImage from "../components/weatherImage";
 import TodayForecast from "../components/TodayForecast";
+import WeekForecast from "../components/weekForecast";
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
@@ -66,8 +67,8 @@ export default function Weather() {
                     </p>
                 </div>
             ) : (
-                <div className="sm:flex sm:h-full hel">
-                    <div className="sm:w-3/5 sm:flex sm:flex-col justify-between sm:full">
+                <div className="sm:flex sm:h-full sm:justify-between hel sm:pb-0">
+                    <div className="sm:w-3/5 sm:flex sm:flex-col  sm:full">
                         <div className="p-10 sm:flex sm:flex-row flex-col sm:justify-between justify-center sm:items-stretch items-center sm:w-full">
                             <div className="flex flex-col justify-between">
                                 <h1 className="text-white text-center sm:text-5xl text-3xl font-extrabold">
@@ -88,6 +89,17 @@ export default function Weather() {
                             <TodayForecast data={todayForecast.hourly} />
                         </section>
                     </div>
+
+                    <div className="sm:w-today p-5 bg-gb rounded-xl sm:hel sm:mt-0 mt-5 ">
+                        <h1 className="text-g sm:text-sm pb-3">7-Day Forecast</h1>
+                        <div className="flex flex-col justify-between">
+                            {todayForecast.daily.map((day) => (
+                                <WeekForecast key={day.day} day={day.day} weatherCodeMax={day.weatherCodeMax} temperatureMax={day.temperatureMax} temperatureMin={day.temperatureMin} />
+                            ))}
+                        </div>
+                    </div>
+                    <div className="p-5 h-4 sm:hidden block"></div>
+
                 </div>
             )}
         </div>

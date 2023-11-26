@@ -9,6 +9,7 @@ module.exports = {
       width:{
         'side':"8%",
         'cont':"89%",
+        'today':"38%"
       },
       colors:{
         "gb":"rgb(32 43 59)",
