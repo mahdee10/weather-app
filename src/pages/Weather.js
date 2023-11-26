@@ -11,7 +11,7 @@ import WeekForecast from "../components/weekForecast";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
+    const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
     const { city } = useCityContext();
 
 
@@ -94,7 +94,7 @@ export default function Weather() {
                         <h1 className="text-g sm:text-sm pb-3">7-Day Forecast</h1>
                         <div className="flex flex-col justify-between">
                             {todayForecast.daily.map((day) => (
-                                <WeekForecast key={day.day} day={day.day} weatherCodeMax={day.weatherCodeMax} temperatureMax={day.temperatureMax} temperatureMin={day.temperatureMin} />
+                                <WeekForecast key={day.time} time={day.time} weatherCodeMax={day.values.weatherCodeMax} temperatureMax={day.values.temperatureMax} temperatureMin={day.values.temperatureMin} />
                             ))}
                         </div>
                     </div>
