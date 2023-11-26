@@ -93,9 +93,13 @@ export default function Weather() {
                     <div className="sm:w-today p-5 bg-gb rounded-xl sm:hel sm:mt-0 mt-5 ">
                         <h1 className="text-g sm:text-sm pb-3">7-Day Forecast</h1>
                         <div className="flex flex-col justify-between">
-                            {todayForecast.daily.map((day) => (
-                                <WeekForecast key={day.time} time={day.time} weatherCodeMax={day.values.weatherCodeMax} temperatureMax={day.values.temperatureMax} temperatureMin={day.values.temperatureMin} />
-                            ))}
+                            {todayForecast.daily.length > 0 ? (
+                                todayForecast.daily.map((day) => (
+                                    <WeekForecast key={day.time} time={day.time} weatherCodeMax={day.values.weatherCodeMax} temperatureMax={day.values.temperatureMax} temperatureMin={day.values.temperatureMin} />
+                                ))
+                            ) : (
+                                <div>wait</div>
+                            )}
                         </div>
                     </div>
                     <div className="p-5 h-4 sm:hidden block"></div>
