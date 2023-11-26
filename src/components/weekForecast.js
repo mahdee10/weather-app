@@ -13,7 +13,7 @@ export default function WeekForecast(props) {
             <div className="sm:hidden block w-[30%]">
                 <WeatherImage imageName={props.weatherCodeMax} size={"xs"}></WeatherImage>
             </div>
-            <h3 className="text-g w-[30%]"><span className="text-white">{temperatureMax}</span>/{temperatureMin}</h3>
+            <h3 className="text-g w-[40%] text-end"><span className="text-white">{temperatureMax}</span>/{temperatureMin}</h3>
         </div>
     )
 }
