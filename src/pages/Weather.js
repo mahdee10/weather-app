@@ -11,7 +11,7 @@ import WeekForecast from "../components/weekForecast";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
+    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
     const { city } = useCityContext();
 
     //Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj
