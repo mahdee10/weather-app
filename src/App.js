@@ -2,7 +2,7 @@
 import './App.css';
 import Weather from './pages/Weather';
 import SideBar from './components/sideBar';
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cities from './pages/Cities';
 import { CityProvider } from './context/cityContext';
