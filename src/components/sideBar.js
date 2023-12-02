@@ -2,12 +2,15 @@ import logo from "../assets/imgs/logo2.png"
 import weather from "../assets/imgs/weather.png"
 import cities from "../assets/imgs/list.png"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
+
 export default function SideBar() {
-    const [pathname, setPath] = useState(window.location.pathname)
-    useEffect(() => {
-        setPath(window.location.pathname);
-    }, []);
+  const location = useLocation();
+  const [pathname, setPathname] = useState(location.pathname);
+
+  useEffect(() => {
+    setPathname(location.pathname);
+  }, [location.pathname]);
 
     return (
         // <div className='sm:w-side bg-gb h-full rounded-3xl'>

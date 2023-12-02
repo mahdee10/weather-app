@@ -12,7 +12,7 @@ import AirCon from "../components/airConditions";
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
+    const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
 
     const { city } = useCityContext();
 
