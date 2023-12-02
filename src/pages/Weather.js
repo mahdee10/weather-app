@@ -7,12 +7,13 @@ import gear2 from "../assets/imgs/gear2.png"
 import WeatherImage from "../components/weatherImage";
 import TodayForecast from "../components/TodayForecast";
 import WeekForecast from "../components/weekForecast";
+import AirCon from "../components/airConditions";
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
     const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
-    
+
     const { city } = useCityContext();
 
     //Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj
@@ -72,7 +73,7 @@ export default function Weather() {
                 </div>
             ) : (
                 <div className="sm:flex sm:h-full sm:justify-between hel sm:pb-0">
-                    <div className="sm:w-3/5 sm:flex sm:flex-col  sm:full">
+                    <div className="sm:w-3/5 sm:flex sm:flex-col justify-between  sm:full">
                         <div className="p-10 sm:flex sm:flex-row flex-col sm:justify-between justify-center sm:items-stretch items-center sm:w-full">
                             <div className="flex flex-col justify-between">
                                 <h1 className="text-white text-center sm:text-5xl text-3xl font-extrabold">
@@ -92,6 +93,16 @@ export default function Weather() {
                         <section className="p-5 sm:w-full bg-gb rounded-xl">
                             <h1 className="text-g sm:text-sm pb-3">Today's Forecast</h1>
                             <TodayForecast data={todayForecast.hourly} />
+                        </section>
+
+                        <section className="p-5 sm:w-full bg-gb rounded-xl sm:mt-0 mt-5">
+                            <h1 className="text-g sm:text-sm pb-3">Air conditions</h1>
+                            <AirCon 
+                            visibility={weatherData.data.values.visibility}
+                            humidity={weatherData.data.values.humidity}
+                            windSpeed={weatherData.data.values.windSpeed}
+                            uvIndex={weatherData.data.values.uvIndex}
+                            ></AirCon>
                         </section>
                     </div>
 
