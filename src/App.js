@@ -3,7 +3,7 @@ import './App.css';
 import Weather from './pages/Weather';
 import SideBar from './components/sideBar';
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 import Cities from './pages/Cities';
 import { CityProvider } from './context/cityContext';
 import Settings from './pages/Settings';
@@ -17,7 +17,6 @@ function App() {
           <SideBar></SideBar>
         </div>
         <div className='sm:w-cont sm:h-full'>
-          <BrowserRouter>
             <Routes>
               <Route path="/" >
                 <Route index element={<Weather />} />
@@ -25,7 +24,6 @@ function App() {
                 <Route path="settings" element={<Settings />} />
               </Route>
             </Routes>
-          </BrowserRouter>
         </div>
       </div>
     </CityProvider>
