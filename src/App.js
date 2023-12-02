@@ -19,9 +19,11 @@ function App() {
         </div>
         <div className='sm:w-cont sm:h-full'>
             <Routes>
-                <Route path='/' element={<Weather />} />
+            <Route path="/" >
+                <Route index element={<Weather />} />
                 <Route path="cities" element={<Cities />} />
                 <Route path="settings" element={<Settings />} />
+              </Route>
             </Routes>
         </div>
       </div>
