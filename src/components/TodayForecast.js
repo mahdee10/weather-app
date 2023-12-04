@@ -8,6 +8,7 @@ import 'swiper/css/scrollbar';
 import { Navigation } from 'swiper/modules';
 import WeatherImage from './weatherImage';
 import { useTheme } from '../context/themeContext';
+import { useTemp } from '../context/tempContext';
 const TodayForecast = ({ data }) => {
     // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const {celsius}=useTemp();
