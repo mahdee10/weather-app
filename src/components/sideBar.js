@@ -55,7 +55,7 @@ export default function SideBar() {
       <div className={`${isMenuOpen ? "block" : "hidden"}  `}>
         <div className={`sm:static absolute flex flex-col w-full sm:bg-transparent ${isDarkMode ? 'bg-mainDark' : 'bg-mainLight'} sm:items-center sm:justify-between justify-center sm:pt-20 pb-5 nav`}>
         <Link
-        onClick={toggleMenu}
+        // onClick={toggleMenu}
           to="/"
           className={` flex flex-col items-center mt-5 ${isDarkMode ? 'text-g' : 'text-dg'} hover:text-white ${pathname === '/' ? 'active' : ''}`}
         >
@@ -64,7 +64,7 @@ export default function SideBar() {
           
         </Link>
         <Link
-        onClick={toggleMenu}
+        // onClick={toggleMenu}
 
           to="/cities"
           className={`flex flex-col items-center mt-5 ${isDarkMode ? 'text-g' : 'text-dg'} hover:text-white ${pathname === '/cities' ? 'active' : ''}`}
@@ -73,7 +73,7 @@ export default function SideBar() {
           <p>Cities</p>
         </Link>
         <Link
-        onClick={toggleMenu}
+        // onClick={toggleMenu}
 
           to="/settings"
           className={`flex flex-col items-center mt-5 ${isDarkMode ? 'text-g' : 'text-dg'} hover:text-white ${pathname === '/settings' ? 'active' : ''}`}
