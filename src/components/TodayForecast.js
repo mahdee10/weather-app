@@ -10,6 +10,7 @@ import WeatherImage from './weatherImage';
 import { useTheme } from '../context/themeContext';
 const TodayForecast = ({ data }) => {
     // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const {celsius}=useTemp();
     const { isDarkMode } = useTheme();
     console.log("dddddddddd", data)
 
@@ -20,6 +21,7 @@ const TodayForecast = ({ data }) => {
         const date = new Date(timeString);
         return date.toLocaleString('en-US', { hour: 'numeric', hour12: true });
     };
+    
 
     return (
         <div className="">
@@ -70,7 +72,7 @@ const TodayForecast = ({ data }) => {
                                 ></WeatherImage>
                             </div>
                             <h4 className=' sm:text-base text-xs pt-2.5 text-white text-center '>
-                                {cat?.values?.temperature}°
+                            {celsius ? `${Math.floor(cat?.values?.temperature)}°C` : `${Math.floor((cat?.values?.temperature * 9/5) + 32)}°F`}
                             </h4>
                         </div>
                     </SwiperSlide>

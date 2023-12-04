@@ -9,8 +9,10 @@ import TodayForecast from "../components/TodayForecast";
 import WeekForecast from "../components/weekForecast";
 import AirCon from "../components/airConditions";
 import { useTheme } from "../context/themeContext";
+import { useTemp } from "../context/tempContext";
 
 export default function Weather() {
+    const { celsius } = useTemp();
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
     const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
@@ -74,9 +76,8 @@ export default function Weather() {
                 </div>
             ) : (
                 <div className="sm:flex sm:h-full sm:justify-between hel sm:pb-0">
-        <div className="sm:hidden block p-5">
-                    
-                    <div className="sm:w-3/5 sm:flex sm:flex-col justify-between  sm:full">
+
+                    <div className="sm:w-3/5 sm:flex sm:flex-col justify-between sm:px-0 px-2 sm:full">
                         <div className="p-10 sm:flex sm:flex-row flex-col sm:justify-between justify-center sm:items-stretch items-center sm:w-full">
                             <div className="flex flex-col justify-between">
                                 <h1 className="text-white text-center sm:text-5xl text-3xl font-extrabold">
@@ -86,7 +87,9 @@ export default function Weather() {
                                     <WeatherImage imageName={weatherData.data.values.weatherCode} size={"l"}></WeatherImage>
                                 </div>
                                 <h2 className="text-white text-center sm:text-5xl text-2xl font-extrabold">
-                                    {weatherData.data.values.temperature}°
+                                    {celsius
+                                        ? `${Math.floor(weatherData.data.values.temperature)}°C`
+                                        : `${Math.floor((weatherData.data.values.temperature * 9 / 5) + 32)}°F`}
                                 </h2>
                             </div>
                             <div className="sm:block hidden">
@@ -101,17 +104,15 @@ export default function Weather() {
 
                         <section className={`p-5 sm:w-full  ${isDarkMode ? 'bg-gb' : 'bg-lb'} rounded-xl sm:mt-0 mt-5`}>
                             <h1 className={`${isDarkMode ? 'text-g' : 'text-dg'} sm:text-sm pb-3`}>Air conditions</h1>
-                            <AirCon 
-                            visibility={weatherData.data.values.visibility}
-                            humidity={weatherData.data.values.humidity}
-                            windSpeed={weatherData.data.values.windSpeed}
-                            uvIndex={weatherData.data.values.uvIndex}
+                            <AirCon
+                                visibility={weatherData.data.values.visibility}
+                                humidity={weatherData.data.values.humidity}
+                                windSpeed={weatherData.data.values.windSpeed}
+                                uvIndex={weatherData.data.values.uvIndex}
                             ></AirCon>
                         </section>
                     </div>
-                    </div>
 
-                    <div className="sm:hidden block p-5">
 
                     <div className={`sm:w-today p-5  ${isDarkMode ? 'bg-gb' : 'bg-lb'} rounded-xl sm:hel sm:mt-0 mt-5 `}>
                         <h1 className={`${isDarkMode ? 'text-g' : 'text-dg'} sm:text-sm pb-3`}>7-Day Forecast</h1>
@@ -125,7 +126,7 @@ export default function Weather() {
                             )}
                         </div>
                     </div>
-                    </div>
+
                     <div className="p-5 h-4 sm:hidden block"></div>
 
                 </div>
