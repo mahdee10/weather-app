@@ -7,7 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cities from './pages/Cities';
 import { CityProvider } from './context/cityContext';
 import Settings from './pages/Settings';
-import { useTheme,ThemeProvider, TempProvider } from './context/themeContext';
+import { useTheme,ThemeProvider } from './context/themeContext';
+import { TempProvider } from './context/tempContext';
 function App() {
 
   return (
