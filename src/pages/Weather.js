@@ -15,7 +15,7 @@ export default function Weather() {
     const { celsius } = useTemp();
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
-    const apiKey = 'L1LSKBYs8Xfy0EUtQfXcEhx3xK8IqpG3';
+    const apiKey = 'Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj';
     const { isDarkMode } = useTheme();
     const { city } = useCityContext();
 
@@ -75,9 +75,9 @@ export default function Weather() {
                     </p>
                 </div>
             ) : (
-                <div className="sm:flex sm:h-full sm:justify-between hel sm:pb-0">
+                <div className="sm:flex sm:h-full sm:justify-between hel sm:pb-0 sm:px-0 px-2">
 
-                    <div className="sm:w-3/5 sm:flex sm:flex-col justify-between sm:px-0 px-2 sm:full">
+                    <div className="sm:w-3/5 sm:flex sm:flex-col justify-between  sm:full">
                         <div className="p-10 sm:flex sm:flex-row flex-col sm:justify-between justify-center sm:items-stretch items-center sm:w-full">
                             <div className="flex flex-col justify-between">
                                 <h1 className="text-white text-center  text-3xl font-extrabold">
