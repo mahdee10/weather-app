@@ -7,9 +7,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation } from 'swiper/modules';
 import WeatherImage from './weatherImage';
+import { useTheme } from '../context/themeContext';
 const TodayForecast = ({ data }) => {
     // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-
+    const { isDarkMode } = useTheme();
     console.log("dddddddddd", data)
 
     if (data === undefined || data.length === 0) {
@@ -53,7 +54,7 @@ const TodayForecast = ({ data }) => {
                         onMouseEnter={() => console.log("Hovered on SwiperSlide:", cat.values.temperature)}
                     >
                         <div className=" flex flex-col sm:w-fit justify-between sm:h-fit h-24 content-end sm:mb-0 mb-3 shrink-0">
-                            <h4 className='sm:text-base text-xs text-g text-center  '>
+                            <h4 className={`sm:text-base text-xs ${isDarkMode ? 'text-g' : 'text-dg'} text-center  `}>
                                 {cat?.time && formatTime(cat.time)}
                             </h4>
                             <div className='sm:flex hidden  pt-2.5 justify-center'>

@@ -8,12 +8,13 @@ import WeatherImage from "../components/weatherImage";
 import TodayForecast from "../components/TodayForecast";
 import WeekForecast from "../components/weekForecast";
 import AirCon from "../components/airConditions";
+import { useTheme } from "../context/themeContext";
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({});
     const [todayForecast, setForecastData] = useState({});
     const apiKey = 'Lryk5QBR1xtWHKoymkxnzasaLjJSnNnt';
-
+    const { isDarkMode } = useTheme();
     const { city } = useCityContext();
 
     //Pd6k0YnQLWeDVgkGKmoG43wyBXDZBtdj
@@ -90,13 +91,13 @@ export default function Weather() {
                                 <WeatherImage imageName={weatherData.data.values.weatherCode} size={"xl"}></WeatherImage>
                             </div>
                         </div>
-                        <section className="p-5 sm:w-full bg-gb rounded-xl">
-                            <h1 className="text-g sm:text-sm pb-3">Today's Forecast</h1>
+                        <section className={`p-5 sm:w-full  ${isDarkMode ? 'bg-gb' : 'bg-lb'} rounded-xl`}>
+                            <h1 className={`${isDarkMode ? 'text-g' : 'text-dg'} sm:text-sm pb-3`}>Today's Forecast</h1>
                             <TodayForecast data={todayForecast.hourly} />
                         </section>
 
-                        <section className="p-5 sm:w-full bg-gb rounded-xl sm:mt-0 mt-5">
-                            <h1 className="text-g sm:text-sm pb-3">Air conditions</h1>
+                        <section className={`p-5 sm:w-full  ${isDarkMode ? 'bg-gb' : 'bg-lb'} rounded-xl sm:mt-0 mt-5`}>
+                            <h1 className={`text-g sm:text-sm pb-3`}>Air conditions</h1>
                             <AirCon 
                             visibility={weatherData.data.values.visibility}
                             humidity={weatherData.data.values.humidity}
@@ -106,8 +107,8 @@ export default function Weather() {
                         </section>
                     </div>
 
-                    <div className="sm:w-today p-5 bg-gb rounded-xl sm:hel sm:mt-0 mt-5 ">
-                        <h1 className="text-g sm:text-sm pb-3">7-Day Forecast</h1>
+                    <div className={`sm:w-today p-5  ${isDarkMode ? 'bg-gb' : 'bg-lb'} rounded-xl sm:hel sm:mt-0 mt-5 `}>
+                        <h1 className={`${isDarkMode ? 'text-g' : 'text-dg'} sm:text-sm pb-3`}>7-Day Forecast</h1>
                         <div className="flex flex-col justify-between">
                             {todayForecast.daily && todayForecast.daily.length > 0 ? (
                                 todayForecast.daily.map((day) => (
