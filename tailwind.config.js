@@ -19,6 +19,9 @@ module.exports = {
         "g":"#9399A2",
         "dg":"#d7d8e3",
         "yell":"#FCC419"
+      },
+      height:{
+        "ma":"1rem"
       }
     },
   },

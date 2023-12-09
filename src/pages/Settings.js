@@ -14,10 +14,10 @@ export default function Settings(){
                     <div onClick={toggleTheme} className={`cursor-pointer ${isDarkMode ? 'text-g' : 'text-dg bg-lb'} rounded-xl w-1/2 text-center py-1`}>Light</div>
                 </div>
 
-                <h3 className={`${celsius ? 'text-g' : 'text-dg'} mt-2 mb-2`}>Temperature</h3>
+                <h3 className={`${isDarkMode ? 'text-g' : 'text-dg'} mt-2 mb-2`}>Temperature</h3>
                 <div className={`flex p-2 rounded-xl ${isDarkMode ? 'bg-mainDark' : 'bg-mainLight'}`}>
-                    <div onClick={toggleTemp} className={`cursor-pointer ${isDarkMode ? 'text-g ' : 'text-dg'} ${celsius ? (isDarkMode ? "bg-gb":"bg-gl"):""}  rounded-xl w-1/2 text-center py-1`}>Celsius</div>
-                    <div onClick={toggleTemp} className={`cursor-pointer ${isDarkMode ? 'text-g' : 'text-dg'} ${!celsius ? (isDarkMode ? "bg-gb":"bg-gl"):""} rounded-xl w-1/2 text-center py-1`}>Fahrenheit</div>
+                    <div onClick={toggleTemp} className={`cursor-pointer ${isDarkMode ? 'text-g ' : 'text-dg'} ${celsius ? (isDarkMode ? "bg-gb":"bg-lb"):""}  rounded-xl w-1/2 text-center py-1`}>Celsius</div>
+                    <div onClick={toggleTemp} className={`cursor-pointer ${isDarkMode ? 'text-g' : 'text-dg'} ${!celsius ? (isDarkMode ? "bg-gb":"bg-lb"):""} rounded-xl w-1/2 text-center py-1`}>Fahrenheit</div>
                 </div>
             </div>
         </div>

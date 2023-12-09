@@ -53,3 +53,6 @@ html{
 .hel{
   height: 38.2rem !important;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
