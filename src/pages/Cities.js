@@ -7,7 +7,7 @@ export default function Cities() {
   const [search, setSearch] = useState("");
   const { isDarkMode } = useTheme();
   const {onChangeCity}=useCityContext();
-  const [cities, setCities] = useState([
+  const [cities] = useState([
     "Copenhagen",
     "Madrid",
     "Beirut",
