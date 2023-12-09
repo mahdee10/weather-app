@@ -39,7 +39,7 @@ export default function Weather() {
             .catch((error) => {
                 console.error('Error fetching weather data:', error);
             });
-    }, [city, weatherData]);
+    }, [city, weatherData, apiKey ]);
 
     // Fetch forecast data using the city context
     useEffect(() => {
@@ -51,7 +51,7 @@ export default function Weather() {
             .catch((error) => {
                 console.error('Error fetching forecast data:', error);
             });
-    }, [city, todayForecast]);
+    }, [city, todayForecast, apiKey ]);
 
     // Define rotating animation styles for gears
     const rotatingStyle = {
