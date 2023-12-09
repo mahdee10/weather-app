@@ -58,8 +58,8 @@ export default function SideBar() {
       </button>
       </div>
       
-      <div className={`${isMenuOpen ? "block" : "hidden"}  `}>
-        <div className={`sm:static absolute flex flex-col w-full sm:bg-transparent ${isDarkMode ? 'bg-mainDark' : 'bg-mainLight'} sm:items-center sm:justify-between justify-center sm:pt-20 pb-5 nav`}>
+      <div className={`${isMenuOpen ? "sm:block flex justify-center" : "hidden"}  `}>
+        <div className={`sm:static absolute flex flex-col  sm:bg-transparent ${isDarkMode ? 'bg-mainDark' : 'bg-mainLight'} sm:items-center sm:justify-between justify-center sm:pt-20 pb-5 nav`}>
         <Link
         // onClick={toggleMenu}
         onClick={closeMenu}
