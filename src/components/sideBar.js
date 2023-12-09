@@ -34,6 +34,12 @@ export default function SideBar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    if (window.innerWidth < 768) {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <div className={`text-white  ${isDarkMode ? 'sm:bg-gb bg-mainDark' : 'sm:bg-lb bg-mainLight'} bg-mainDark sm:h-full flex flex-col w-full rounded-3xl pt-5`}>
       <div className="flex justify-around">
@@ -56,6 +62,7 @@ export default function SideBar() {
         <div className={`sm:static absolute flex flex-col w-full sm:bg-transparent ${isDarkMode ? 'bg-mainDark' : 'bg-mainLight'} sm:items-center sm:justify-between justify-center sm:pt-20 pb-5 nav`}>
         <Link
         // onClick={toggleMenu}
+        onClick={closeMenu}
           to="/"
           className={` flex flex-col items-center mt-5 ${isDarkMode ? 'text-g' : 'text-dg'} hover:text-white ${pathname === '/' ? 'active' : ''}`}
         >
@@ -65,6 +72,7 @@ export default function SideBar() {
         </Link>
         <Link
         // onClick={toggleMenu}
+        onClick={closeMenu}
 
           to="/cities"
           className={`flex flex-col items-center mt-5 ${isDarkMode ? 'text-g' : 'text-dg'} hover:text-white ${pathname === '/cities' ? 'active' : ''}`}
@@ -73,6 +81,8 @@ export default function SideBar() {
           <p>Cities</p>
         </Link>
         <Link
+        onClick={closeMenu}
+
         // onClick={toggleMenu}
 
           to="/settings"
