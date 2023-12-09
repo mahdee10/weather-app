@@ -1,4 +1,4 @@
-import logo from "../assets/imgs/logo2.png";
+import logo from "../assets/imgs/logo.png";
 import weather from "../assets/imgs/weather.png";
 import cities from "../assets/imgs/list.png";
 import { useEffect, useState } from "react";
@@ -52,14 +52,14 @@ export default function SideBar() {
         onClick={toggleMenu}
       >
         <span className="sr-only">Open main menu</span>
-        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <svg className="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
         </svg>
       </button>
       </div>
       
       <div className={`${isMenuOpen ? "sm:block flex justify-center" : "hidden"}  `}>
-        <div className={`sm:static absolute flex flex-col  sm:bg-transparent ${isDarkMode ? 'bg-mainDark' : 'bg-mainLight'} sm:items-center sm:justify-between justify-center sm:pt-20 pb-5 nav`}>
+        <div className={`sm:static absolute flex flex-col w-full sm:bg-transparent ${isDarkMode ? 'bg-mainDark' : 'bg-mainLight'} sm:items-center sm:justify-between justify-center sm:pt-20 pb-5 nav`}>
         <Link
         // onClick={toggleMenu}
         onClick={closeMenu}
