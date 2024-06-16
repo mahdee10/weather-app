@@ -4,7 +4,7 @@ weather data fetching and a toggleable light/dark
 mode for user convenience.
 
 # Deployed
-https://celebrated-concha-cbf1de.netlify.app/
+https://weatherers.netlify.app
 
 ## Available Scripts
 
