@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+## Weather Website
+Created a weather website featuring real-time
+weather data fetching and a toggleable light/dark
+mode for user convenience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Deployed
+https://celebrated-concha-cbf1de.netlify.app/
 
 ## Available Scripts
 
