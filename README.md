@@ -24,8 +24,7 @@ Weatherers uses a real-time weather API to fetch up-to-date information for the 
 ## 🛠️ Tech Stack
 
 - **Frontend**: React.js
-- **Styling**: CSS / Tailwind (if used)
-- **API**: OpenWeatherMap API (or whichever API you're using)
+- **Styling**: CSS / Tailwind
 - **Deployment**: Netlify
 
 ---
