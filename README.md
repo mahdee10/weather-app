@@ -34,7 +34,7 @@ Weatherers uses a real-time weather API to fetch up-to-date information for the 
 To run the project locally:
 
 ```bash
-git clone https://github.com/yourusername/weather-website.git
+git clone https://github.com/mahdee10/weather-app.git
 cd weather-website
 npm install
 npm start
